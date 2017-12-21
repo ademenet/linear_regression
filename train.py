@@ -71,7 +71,7 @@ def visual():
         plt.show()
 
 
-def normalize(self, X):
+def normalize(X):
     """Normalize the datas.
     
     We use this formula:
@@ -98,8 +98,8 @@ def argparser():
     """Parse arguments and return a dict."""
     parser = argparse.ArgumentParser(description="This program train our linear regression.")
     parser.add_argument('-v', '--visual', action='store_true', help='Visual mode')
-    parser.add_argument('-e', '--epochs', type=int, default=400, help='Set number of epochs')
-    parser.add_argument('-lr', '--learningrate', type=float, default=0.01, help='Set the learning rate')    
+    parser.add_argument('-e', '--epochs', type=int, default=1000, help='Set number of epochs')
+    parser.add_argument('-lr', '--learningrate', type=float, default=0.003, help='Set the learning rate')    
     return vars(parser.parse_args())
 
 if __name__ == '__main__':
